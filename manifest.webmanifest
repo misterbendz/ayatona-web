@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "آياتنا — صانع فيديوهات القرآن",
+  "short_name": "آياتنا",
+  "description": "اصنع فيديوهات قرآنية للشورتس والستوري وتيك توك بخط المصحف وتلاوة متزامنة كلمة بكلمة.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070a10",
+  "theme_color": "#070a10",
+  "categories": ["education", "productivity", "photo"],
+  "icons": [
+    { "src": "pwa/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "pwa/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "pwa/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
