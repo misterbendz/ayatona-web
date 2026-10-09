@@ -63,6 +63,20 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // The news list behind the bell: the network first, so new updates show at once.
+  if (url.pathname.endsWith('/updates.json')) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          if (res.ok) caches.open(VERSION).then((c) => c.put(req, copy));
+          return res;
+        })
+        .catch(() => caches.match(req)),
+    );
+    return;
+  }
+
   // Fonts, Quran text and icons: answer from the saved copy, refresh it in the background.
   event.respondWith(
     caches.open(VERSION).then((cache) =>
